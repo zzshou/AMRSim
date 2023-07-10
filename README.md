@@ -19,15 +19,19 @@ input "src.amr" and "tgt.amr"
 output "src_tgt.json"
 
 ### Predicting
+Download model from the [link](https://drive.google.com/file/d/1klTrvv3hpIPxaCoMbRI7IJDme-Vq3UPS/view?usp=share_link)
+unzip to the output directory
 ```
 cd sentence_transformers
 python test_amrsim.py
 ```
 
 ### Training
-wiki data
+Download wiki data from the [link]()
+```
+python train_stsb_ct_amr.py
+```
 
-
-code citation:
+Thanks:
 fact-graph
 sentence-transformer
