@@ -24,7 +24,7 @@ from distutils.dir_util import copy_tree
 from . import __MODEL_HUB_ORGANIZATION__
 from .evaluation import SentenceEvaluator
 from .util import import_from_string, batch_to_device, fullname, snapshot_download
-from .models import Transformer, Pooling, Dense
+from .models import Transformer, Pooling
 from .model_card_templates import ModelCardTemplate
 from . import __version__
 

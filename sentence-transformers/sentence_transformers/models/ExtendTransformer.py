@@ -242,8 +242,11 @@ class ExtendTransformer(nn.Module):
 
 
 def transform_graph_geometric(embeddings, edge_index, edge_type):
-    list_geometric_data = [Data(x=emb, edge_index=torch.tensor(edge_index[idx], dtype=torch.long),
-                                y=torch.tensor(edge_type[idx], dtype=torch.long)) for idx, emb in enumerate(embeddings)]
+    # list_geometric_data = [Data(x=emb, edge_index=torch.tensor(edge_index[idx], dtype=torch.long),
+    #                             y=torch.tensor(edge_type[idx], dtype=torch.long)) for idx, emb in enumerate(embeddings)]
+    list_geometric_data = [Data(x=emb, edge_index=edge_index[idx].clone().detach(),
+                                y=edge_type[idx].clone().detach()) for idx, emb in enumerate(embeddings)]
+
     bdl = Batch.from_data_list(list_geometric_data)
     if torch.cuda.is_available():
         bdl = bdl.to("cuda:" + str(torch.cuda.current_device()))

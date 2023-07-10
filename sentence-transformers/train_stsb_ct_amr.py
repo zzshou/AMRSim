@@ -17,7 +17,7 @@ logging.basicConfig(format='%(asctime)s - %(message)s',
 #### /print debug information to stdout
 
 ## Training parameters
-model_name = '/home/data/zshou/corpus/bert-base-uncased'
+model_name = 'bert-base-uncased'
 model_type = model_name.split('/')[-1]
 batch_size = 16
 pos_neg_ratio = 4  # batch_size must be devisible by pos_neg_ratio
@@ -25,7 +25,7 @@ epochs = 1
 max_seq_length = 128
 
 gnn = 'GraphConv'
-gnn_layer = 6
+gnn_layer = 4
 adapter_size = 128
 learning_rate = 1e-5
 add_graph = True
@@ -66,7 +66,7 @@ pooling_model = models.Pooling(word_embedding_model.get_word_embedding_dimension
 model = ExtendSentenceTransformer(modules=[word_embedding_model, pooling_model])
 
 ################# Download and load STSb #################
-dev_sts_dataset_path = '../data/sts/main/dev-sense.json'
+dev_sts_dataset_path = '../data/dev-sense.json'
 dev_samples = []
 
 with open(dev_sts_dataset_path, 'r') as f:

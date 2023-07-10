@@ -82,4 +82,5 @@ if __name__ == '__main__':
     src_file = '../data/src.amr'
     tgt_file = '../data/tgt.amr'
     save_file = '../data/src_tgt.json'
-    combine(src_file, tgt_file, save_file)
+    score_file = '../data/test.y'  # or ''
+    combine(src_file, tgt_file, save_file, score_file)

@@ -10,11 +10,12 @@ python amr2json.py
 input "src.amr" and "tgt.amr"
 output "src_tgt.json"
 
-2. training
+2. predicting
+cd sentence_transformers
+python test_amrsim.py
 
-
-3. predicting
-
+3. training
+wiki data
 
 
 code citation:

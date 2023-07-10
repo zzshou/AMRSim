@@ -113,8 +113,6 @@ class EmbeddingSimilarityEvaluator(SentenceEvaluator):
                                    pos_ids=self.ref2_pos_ids)
 
         cosine_scores = 1 - (paired_cosine_distances(embeddings1, embeddings2))
-        t2 = time.time()
-        print(t2 - t1)
 
         labels = self.scores
         manhattan_distances = -paired_manhattan_distances(embeddings1, embeddings2)

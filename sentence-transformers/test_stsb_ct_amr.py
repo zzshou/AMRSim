@@ -31,4 +31,4 @@ with open(test_sts_dataset_path, 'r') as f:
 test_evaluator = EmbeddingSimilarityEvaluator.from_input_examples(test_samples, name='test', batch_size=128)
 test_evaluator.main_similarity = SimilarityFunction.COSINE
 cos_score = test_evaluator(model)
-print(cos_score)  # spearson
+# print(cos_score)  # spearson
