@@ -79,8 +79,26 @@ def combine(src_file, tgt_file, save_file, score_file=None):
 
 
 if __name__ == '__main__':
-    src_file = '../data/src.amr'
-    tgt_file = '../data/tgt.amr'
-    save_file = '../data/src_tgt.json'
-    score_file = '../data/test.y'  # or ''
+    import argparse
+
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('-src'
+                        , type=str
+                        , help='the first amr file', default='../data/src.amr')
+    parser.add_argument('-tgt'
+                        , type=str
+                        , help='the second amr file', default='../data/tgt.amr')
+    parser.add_argument('-output'
+                        , type=str
+                        , help='output file path', default='../data/src_tgt.json')
+    parser.add_argument('-score'
+                        , type=str
+                        , help='score file', default='')
+
+    args = parser.parse_args()
+    src_file = args.src
+    tgt_file = args.tgt
+    save_file = args.output
+    score_file = args.score
     combine(src_file, tgt_file, save_file, score_file)
