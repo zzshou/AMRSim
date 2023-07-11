@@ -13,6 +13,12 @@ Run the following script to install the dependencies:
 ```
 pip install -r requirements.txt
 ```
+Install [amr-utils](https://github.com/ablodge/amr-utils):
+```
+git clone https://github.com//ablodge/amr-utils
+pip install penman
+pip install ./amr-utils
+```
 
 ## Computing AMR Similarity
 
