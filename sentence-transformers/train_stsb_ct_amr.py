@@ -33,7 +33,7 @@ add_graph = True
 model_save_path = 'output/ct-amr-bert'
 ################# Train sentences #################
 # We use 1 Million sentences from Wikipedia to train our model
-wikipedia_dataset_path = '../data/wiki_train_data.json'  #
+wikipedia_dataset_path = '../data/wiki_train_data.json'
 # train_sentences are simply your list of sentences
 train_samples = []
 with open(wikipedia_dataset_path, 'r', encoding='utf8') as fIn:
