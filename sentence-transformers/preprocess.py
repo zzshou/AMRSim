@@ -101,7 +101,10 @@ def generate_edge_tensors(triples, max_seq_length_graph):
         length = nx.single_source_dijkstra_path_length(G, 1)
     except:
         print(triples)
-        return None, None, None
+        edge_index = torch.tensor([[0], [0]], dtype=torch.long)
+        edge_types = torch.tensor([0], dtype=torch.long)
+        position_ids = [0, 1, 2]
+        return edge_index, edge_types, position_ids
     position_ids = [0]
 
     for i in range(1, max_node + 1):
