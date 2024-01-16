@@ -31,7 +31,7 @@ cd preprocess
 python amr2json.py -src <amr_file> -tgt <amr_file>
 ```
 
-### Returning Similarity
+### Returning Similarity with pre-trained model
 
 Download the model from [Google drive](https://drive.google.com/file/d/1klTrvv3hpIPxaCoMbRI7IJDme-Vq3UPS/view?usp=share_link) and
 unzip to the output directory (/sentence-transformers/output/).
@@ -41,7 +41,7 @@ cd sentence_transformers
 python test_amrsim.py
 ```
 
-### Training
+### Training a Similarity model from scratch
 Following data preparation in AMR-DA (Shou et al., 2022), AMRSim utilized SPRING (Bevilacqua et al., 2021) to parse [one-million sentences](https://huggingface.co/datasets/princeton-nlp/datasets-for-simcse/tree/main) randomly sampled from English Wikipedia2 to AMR graphs. 
 
 Generated Wiki AMR graphs were preprocessed and can be download from the [Google drive](https://drive.google.com/file/d/1VAuqLi0LsaCCbII_s2dPa9eDARicw18G/view?usp=sharing).
